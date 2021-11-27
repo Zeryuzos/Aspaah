@@ -1,3 +1,3 @@
 <x-app-layout>
-    <h1>Hola</h1>
+@include('./.view-administrador')
 </x-app-layout>
