@@ -8,7 +8,40 @@ Document
 /**
 Use a better box model (opinionated).
 */
+.bg_aspaah {
+	background-color: #005451 !important;
+	color: #fff;
+}
+.bg_aspaah:hover {
+	color: #fff !important;
+}
 
+.nav-link {
+	color: #fff !important;
+}
+.nav-link:hover {
+	color: rgb(135, 248, 195) !important;	
+}
+.os-viewport {
+	margin-top: 200px !important;
+}
+.buttons-html5 {
+	background-color: #005451!important;
+}
+.buttons-print {
+	background-color: #005451!important;
+}
+.buttons-colvis {
+	background-color: #005451!important;
+}
+.user-footer {
+	background-color: #0f8d89!important;
+	border-color: #e5e7eb;
+	border-width: 1px;
+}
+.active {
+	background-color: rgba(0,0,0,.6) !important;
+}
 *,
 ::before,
 ::after {
@@ -2254,11 +2287,3 @@ select {
 }
 
 /*------------------------------*/
-
-.tamaño_logo{
-	height: 10px;
-	width: 10px;
-}
-.clb-aspaah{
-	background-color: #185C66;
-  }

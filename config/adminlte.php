@@ -47,7 +47,7 @@ return [
 
     'logo' => '<b>Asociación</b> ASPAAH',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'brand-image-xxl elevation-5 mb-4 z-index 10000',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Aspaah',
@@ -123,15 +123,16 @@ return [
 
     'classes_body' => '',
     'classes_brand' => '',
-    'classes_brand_text' => '',
+    'classes_brand_text' => 'mx-4 text-lg',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'bg-info elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_sidebar' => 'bg_aspaah elevation-4',
+    'classes_sidebar_nav' => 'sidebar_nav',
+    'classes_topnav' => 'bg_aspaah',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -145,11 +146,11 @@ return [
     |
     */
 
-    'sidebar_mini' => 'lg',
+    'sidebar_mini' => '',
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
-    'sidebar_collapse_remember_no_transition' => true,
+    'sidebar_collapse_remember_no_transition' => false,
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
@@ -223,48 +224,82 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
-
     'menu' => [
         // Navbar items:
         ['header' => 'account_settings'],
         [
-            'text' => 'Socios',
+            'text' => 'SOCIOS',
             'url'  => 'admin/crud',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Eventos',
-            'url'  => 'admin/crud/distritos_create',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'Administraciones',
+            'text'    => 'ADMINISTRACIÓN DE SOCIOS',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Distrito',
+                    'text' => 'CATEGORIAS',
+                    'url'  => 'categorias',
+                ],
+                [
+                    'text' => 'HIJOS',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'Finzanzas',
-                    'url'     => '#',
+                    'text'    => 'UBICACIONES',
                     'submenu' => [
                         [
-                            'text' => 'Ingresos',
-                            'url'  => '#',
+                            'text' => 'DEPARTAMENTOS',
+                            'url'  => 'departamentos',
                         ],
                         [
-                            'text'    => 'Egresos',
-                            'url'     => '#',
+                            'text' => 'PROVINCIA',
+                            'url'  => 'provincias',
+                        ],
+                        [
+                            'text'    => 'DISTRITO',
+                            'url'     => 'distritos',
+                        ],
+                        [
+                            'text'    => 'COMUNIDAD',
+                            'url'     => 'comunidads',
                         ],
                     ],
                 ],
+            ],
+            
+        ],
+        [
+            'text' => 'Eventos',
+            'url'  => 'eventos',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text'    => 'ADMINISTRACIÓN DE EVENTOS',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [               
                 [
                     'text' => 'Asistencia',
-                    'url'  => '#',
+                    'url'  => 'asistencias',
                 ],
             ],
+            
         ],
+        [
+            'text'    => 'ADMINISTRACIÓN DE FINANZAS',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'INGRESOS',
+                    'url'  => 'ingresos',
+                ],                
+                [
+                    'text' => 'EGRESOS',
+                    'url'  => 'egresos',
+                ],
+            ],
+            
+        ],
+       
         /*['header' => 'labels'],
         [
             'text'       => 'important',
