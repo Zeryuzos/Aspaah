@@ -229,7 +229,7 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'SOCIOS',
-            'url'  => 'admin/crud',
+            'url'  => 'socios',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -242,7 +242,7 @@ return [
                 ],
                 [
                     'text' => 'HIJOS',
-                    'url'  => '#',
+                    'url'  => 'hijos',
                 ],
                 [
                     'text'    => 'UBICACIONES',

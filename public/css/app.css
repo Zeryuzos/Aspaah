@@ -13,7 +13,35 @@ Use a better box model (opinionated).
 	color: #fff;
 }
 .bg_aspaah:hover {
-	color: #fff !important;
+	color: #42f7c9 !important;
+}
+
+.opacity_image{
+	opacity: 1;
+}
+.opacity_image:hover{
+	opacity: 0.8;
+}
+.opacity_image_letra{
+	opacity: 0;
+}
+.opacity_image_letra:hover{
+	opacity: 1;
+}
+.color_img {
+	color: #008C87 !important;
+}
+.color_img:hover{
+	color: #005451 !important;
+}
+.color_img1 {
+	color: #000 !important;
+}
+.color_img1:hover{
+	color: #000 !important;
+}
+.style_cursor {
+	cursor:pointer; cursor: hand
 }
 
 .nav-link {
