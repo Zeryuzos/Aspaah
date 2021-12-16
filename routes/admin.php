@@ -29,5 +29,6 @@ Route::get('/comunidads/distrito_idByProv/{idProvincia}','App\Http\Controllers\C
 Route::get('/socios/provincia_idByDep/{idDepartamento}','App\Http\Controllers\SocioController@provincia_idByDep');
 Route::get('/socios/distrito_idByProv/{idProvincia}','App\Http\Controllers\SocioController@distrito_idByProv');
 Route::get('/socios/comunidad_idByDist/{idComunidad}','App\Http\Controllers\SocioController@comunidad_idByDist');
+Route::get('/socios/{socio}', [App\Http\Controllers\SocioController::class, 'show'])->name('socio.show');
 
 
