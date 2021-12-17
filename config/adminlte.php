@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Asociación</b> ASPAAH',
+    'logo' => '<center>Asociación&nbsp;&nbsp;ASPAAH</center>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'brand-image-xxl elevation-5 mb-4 z-index 10000',
     'logo_img_xl' => null,
@@ -269,9 +269,9 @@ return [
             
         ],
         [
-            'text' => 'Eventos',
-            'url'  => 'eventos',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'EVENTOS',
+            'route'  => 'eventos.index',
+            'icon' => 'far fa-fw fa-calendar-plus',
         ],
         [
             'text'    => 'ADMINISTRACIÓN DE EVENTOS',

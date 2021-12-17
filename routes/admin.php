@@ -10,6 +10,8 @@ use App\Http\Controllers\ComunidadController;
 use App\Http\Controllers\SocioController;
 use App\Http\Controllers\HijoController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\EventoController;
+
 
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
     return view('admin.index');
@@ -33,3 +35,5 @@ Route::get('/socios/comunidad_idByDist/{idComunidad}','App\Http\Controllers\Soci
 Route::get('/socios/{socio}', [App\Http\Controllers\SocioController::class, 'show'])->name('socio.show');
 Route::get('/pdf', 'App\Http\Controllers\PDFController@PDF')->name('descargarPDF');
 
+
+Route::resource('eventos', EventoController::class)->names('eventos');

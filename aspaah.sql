@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-12-2021 a las 03:36:06
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 8.0.3
+-- Servidor: localhost
+-- Tiempo de generación: 17-12-2021 a las 09:07:15
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -2010,6 +2010,32 @@ INSERT INTO `distritos` (`id`, `provincia_id`, `no_distrito`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fecha` date NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `nombre`, `fecha`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Elección de Nueva Directiva', '2021-12-23', 'nueva prueba -01', '2021-12-17 12:45:25', '2021-12-17 12:45:25'),
+(2, 'Aniversario aspaah', '2021-12-22', 'nueva prueba -02', '2021-12-17 12:46:11', '2021-12-17 12:46:11'),
+(3, 'Inicio con la fecha de Siembra', '2021-12-31', 'nueva prueba -03', '2021-12-17 12:46:49', '2021-12-17 12:46:49'),
+(4, 'Nuevo formato de alquiler de maquinarias', '2021-12-20', 'nueva prueba -05', '2021-12-17 12:47:12', '2021-12-17 12:47:12'),
+(5, 'Importacion de cosecha', '2021-12-15', 'nueva prueba -07', '2021-12-17 12:48:08', '2021-12-17 12:48:08');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `failed_jobs`
 --
 
@@ -2083,7 +2109,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2021_11_30_010902_create_distritos_table', 1),
 (11, '2021_11_30_010913_create_comunidads_table', 1),
 (12, '2021_11_30_010923_create_socios_table', 1),
-(13, '2021_12_14_012706_create_hijos_table', 1);
+(13, '2021_12_14_012706_create_hijos_table', 1),
+(14, '2021_12_16_164104_create_eventos_table', 2);
 
 -- --------------------------------------------------------
 
@@ -2351,7 +2378,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('d1oMLAwB6oarPHdwesf5JLtCApxO2kVFvp2Kn4jr', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicXhhZDg3bDhFVTlLZEFyM1ZEMVhwRzJTeE5hV3Rma1lROHIzWGJVOSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb2Npb3Mvc2hvdyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRpaktsMmtLWHJRUXJRaXZTcVJ2UTRlcVdGb0QzREtUTy9aTi9kSE5pYXBkZk9ZMlM2QkpMNiI7fQ==', 1639621860);
+('d1oMLAwB6oarPHdwesf5JLtCApxO2kVFvp2Kn4jr', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicXhhZDg3bDhFVTlLZEFyM1ZEMVhwRzJTeE5hV3Rma1lROHIzWGJVOSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb2Npb3Mvc2hvdyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRpaktsMmtLWHJRUXJRaXZTcVJ2UTRlcVdGb0QzREtUTy9aTi9kSE5pYXBkZk9ZMlM2QkpMNiI7fQ==', 1639621860),
+('ZqbJWCwWBG9B06hnJYrJzbcBho6wG0EzcZfIm3yy', 2, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.20 Safari/537.36 Edg/97.0.1072.13', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiWUd4bmV5YWRWeDZRanliMGNmYU5hQU12dEVoeVIzNEtjMUR1Q1N1SiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI5OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvZXZlbnRvcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRtVnVpZGV3cXEybG9WWWouRmhzeGEuUmxkbFNkZ3NpckFxMTY4TGp6WUpvdVlDQzF0MGJFVyI7fQ==', 1639727664);
 
 -- --------------------------------------------------------
 
@@ -2426,7 +2454,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'Jhobany Ticona', 'jhobany.ticona@upeu.edu.pe', NULL, '$2y$10$ijKl2kKXrQQrQivSqRvQ4eqWFoD3DKTO/ZN/dHNiapdfOY2S6BJL6', NULL, NULL, NULL, NULL, NULL, '2021-12-16 03:13:24', '2021-12-16 03:13:24');
+(1, 'Jhobany Ticona', 'jhobany.ticona@upeu.edu.pe', NULL, '$2y$10$ijKl2kKXrQQrQivSqRvQ4eqWFoD3DKTO/ZN/dHNiapdfOY2S6BJL6', NULL, NULL, NULL, NULL, NULL, '2021-12-16 03:13:24', '2021-12-16 03:13:24'),
+(2, 'Henry Jhonatan Velasquez Rosas', 'henry.velasquez@upeu.edu.pe', NULL, '$2y$10$mVuidewqq2loVYj.Fhsxa.RldlSdgsirAq168LjzYJouYCC1t0bEW', NULL, NULL, NULL, NULL, NULL, '2021-12-17 12:44:34', '2021-12-17 12:44:34');
 
 --
 -- Índices para tablas volcadas
@@ -2457,6 +2486,12 @@ ALTER TABLE `departamentos`
 ALTER TABLE `distritos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `distritos_provincia_id_foreign` (`provincia_id`);
+
+--
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `failed_jobs`
@@ -2553,6 +2588,12 @@ ALTER TABLE `distritos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250402;
 
 --
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -2568,7 +2609,7 @@ ALTER TABLE `hijos`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -2592,7 +2633,7 @@ ALTER TABLE `socios`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
