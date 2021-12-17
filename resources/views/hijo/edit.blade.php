@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-4">
                     <label for="">socio</label>
-                    <select aria-describedby="socio_id" class="form-control" name="socio_id">
+                    <select aria-describedby="socio_id" class="form-control" name="socio_id" selected="true" disabled="disabled>
                         @if (!$hijo->socio)
                         <option value="" selected disabled>Selecciona un socio</option>
                         @foreach ($socios as $socio)

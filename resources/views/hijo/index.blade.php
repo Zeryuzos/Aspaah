@@ -27,7 +27,7 @@
             <tr class="odd">
                 <td class="sorting_1 dtr-control">{{ $hijo->id}}</td>
                 @if ($hijo->socio_id)
-                <td>{{$hijo->socio->no_socio}}</td>
+                <td>{{$hijo->socio->no_socio}} {{$hijo->socio->ap_socio}}</td>
                 @else
                 <td>Ningun socio</td>
                 @endif

@@ -12,41 +12,76 @@
         <div class="mb-3 card-body">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <label for="">Categoria</label>
-                    <select id="categoria_id" name="categoria_id" class="form-control" tabindex="1">
-                        !<option>Selecciona una Categoria</option>
-                    @foreach ($categorias as $categoria)
-                            <option value="{{ $categoria->id }}">{{ $categoria['no_categoria'] }}</option>
-                        @endforeach
-                    </select>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <label for="" class="form-label">Foto</label>
+                        </div>
+                        <div class="flex items-center justify-center col-md-12 mb-4">
+                            <img id="imagenSeleccionada" style="max-height: 250px;">
+                        </div>
+                        <div class="col-md-12">
+                            <div class='flex items-center justify-center w-full color_img t_create'>
+                                <label class=''>
+                                    <div class='flex flex-col items-center justify-center pt-7 t_create'>
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    <p class='lowercase text-sm pt-1 tracking-wider'>Seleccionar Foto</p>
+                                    </div>
+                                <input type="file" id="im_socio" name="im_socio" class="form-control hidden" accept="image/"/>
+                                <br>
+                                @error('im_socio')
+                                <small class="text-danger">{{$message}}</small>
+                                @enderror
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Nombre Socio</label>
-                    <input placeholder="Julio" type="text" id="no_socio" name="no_socio" class="form-control" tabindex="2">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Apellido Paterno</label>
-                    <input placeholder="Torres" type="text" id="ap_socio" name="ap_socio" class="form-control" tabindex="3">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Apellido Materno</label>
-                    <input type="text" id="am_socio" name="am_socio" class="form-control" tabindex="4">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Dni</label>
-                    <input placeholder="02145677" type="text" id="dni_socio" name="dni_socio" class="form-control" tabindex="5">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Email</label>
-                    <input placeholder="@gmail.com" type="text" id="em_socio" name="em_socio" class="form-control" tabindex="6">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Celular</label>
-                    <input placeholder="912020329" type="text" id="nu_celular_socio" name="nu_celular_socio" class="form-control" tabindex="7">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <label for="" class="form-label">Fecha de nacimiento</label>
-                    <input type="date" id="fn_socio" name="fn_socio" class="form-control" tabindex="8">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Categoria</label>
+                            <select id="categoria_id" name="categoria_id" class="form-control" tabindex="1">
+                                !<option>Selecciona una Categoria</option>
+                            @foreach ($categorias as $categoria)
+                                    <option value="{{ $categoria->id }}">{{ $categoria['no_categoria'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Nombre Socio</label>
+                            <input placeholder="Julio" type="text" id="no_socio" name="no_socio" class="form-control" tabindex="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Apellido Paterno</label>
+                            <input placeholder="Torres" type="text" id="ap_socio" name="ap_socio" class="form-control" tabindex="3">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Apellido Materno</label>
+                            <input type="text" id="am_socio" name="am_socio" class="form-control" tabindex="4">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Dni</label>
+                            <input placeholder="02145677" type="text" id="dni_socio" name="dni_socio" class="form-control" tabindex="5">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Email</label>
+                            <input placeholder="@gmail.com" type="text" id="em_socio" name="em_socio" class="form-control" tabindex="6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Celular</label>
+                            <input placeholder="912020329" type="text" id="nu_celular_socio" name="nu_celular_socio" class="form-control" tabindex="7">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" id="fn_socio" name="fn_socio" class="form-control" tabindex="8">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <label for="" class="form-label">Estado Civil</label>
@@ -124,27 +159,6 @@
                     </select>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img id="imagenSeleccionada" style="max-height: 300px;">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="grid grid-cols-1 mx-7">
-                        <label for="" class="form-label">Foto</label>
-                            <div class='flex items-center justify-center w-full border border-secondary color_img'>
-                                <label class='flex flex-col w-full h-32 group'>
-                                    <div class='flex flex-col items-center justify-center pt-7'>
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                    <p class='lowercase text-sm pt-1 tracking-wider'>Seleccionar Foto</p>
-                                    </div>
-                                <input type="file" id="im_socio" name="im_socio" class="form-control hidden" accept="image/"/>
-                                <br>
-                                @error('im_socio')
-                                <small class="text-danger">{{$message}}</small>
-                                @enderror
-                                </label>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
                     <label for="" class="form-label">Nombre del conyugue</label>
                     <input type="text" id="conyugue_socio" name="conyugue_socio" class="form-control" tabindex="25">
                 </div>
@@ -153,8 +167,8 @@
                     <input type="text" id="conyugue_dni_socio" name="conyugue_dni_socio" class="form-control" tabindex="26">
                 </div>
         </div>
-        <div class="card">
-            <div class="card-header bg_aspaah">
+        <div class="card border-top border-info">
+            <div class="card-header">
                 <div class="row">
                     <div class="col-md-11 col-sm-11 col-10"><h2 class="card-title"><b>Datos de los Hijos</b></h2></div>
                     <div class="col-md-1 col-sm-1 col-2">
@@ -170,11 +184,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-6 mb-2">
+            <div class="col-md-6 col-12 mb-2">
                 <label for="" class="form-label">Observaciones</label>
                 <input type="text" id="observaciones_socio" name="observaciones_socio" class="form-control" tabindex="27">
             </div>
-            <div class="col-md-6 col-6 mb-2 d-flex align-items-end justify-content-end">
+            <div class="col-md-6 col-12 mb-2 d-flex align-items-end d-flex justify-content-between">
                 <a href="/socios" class="btn btn-warning mr-4" tabindex="4"><i class="fas fa-backspace"></i> Cancelar</a>
                 <button type="submit" class="btn btn-success" tabindex="5"><i class="fas fa-file-download"></i> Guardar</button>
             </div>

@@ -35,7 +35,7 @@ class CreateSociosTable extends Migration
             $table->string('im_socio', 200)->nullable();
             $table->string('conyugue_socio', 100)->nullable();
             $table->string('conyugue_dni_socio', 8)->nullable();
-            $table->string('observaciones_socio', 8)->nullable();
+            $table->string('observaciones_socio', 220)->nullable();
             $table->timestamps();
         });
     }

@@ -8,6 +8,18 @@ Document
 /**
 Use a better box model (opinionated).
 */
+.t_create{
+	height: 50px;
+	padding-top: 7%;
+	box-sizing: border-box;
+}
+.z_create{
+	z-index: 0;
+	opacity: .5;
+}
+.z_create:hover{
+	z-index: 100;
+}
 .bg_aspaah {
 	background-color: #005451 !important;
 	color: #fff;

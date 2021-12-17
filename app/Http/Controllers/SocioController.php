@@ -119,13 +119,14 @@ class SocioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Socio $socio)
+    public function show(/*Socio $socio*/$id)
     {
-
-        //$socio = Socio::findOrFail($id);
-        return view('socio.show', compact('socio'));
+        $comunidads = Comunidad::all();
+        $categorias = Categoria::all();
+        $hijos = Hijo::all();
+        $socio = Socio::findOrFail($id);
+        return view('socio.show', compact(['socio', 'categorias', 'comunidads', 'hijos']));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -204,7 +205,6 @@ class SocioController extends Controller
         $socio->conyugue_socio = $request->get('conyugue_socio');
         $socio->conyugue_dni_socio = $request->get('conyugue_dni_socio');
         $socio->observaciones_socio = $request->get('observaciones_socio');
-        $socio->save();
         $socio->save();
         return redirect('/socios');
     }
