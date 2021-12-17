@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 17-12-2021 a las 09:07:15
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.8
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-12-2021 a las 15:08:49
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,9 +40,9 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `no_categoria`, `de_categoria`, `created_at`, `updated_at`) VALUES
-(1, 'Principiante', 'Esta categoria es para socios que recien estan empezando con la asociación', '2021-12-16 03:13:36', '2021-12-16 03:13:36'),
-(2, 'Medio', 'Esta categoria es para socios que ya tienen una base concreta con la asociación', '2021-12-16 03:13:41', '2021-12-16 03:13:41'),
-(3, 'Avanzado', 'Esta categoria es para socios que apoyan a los demas socios, asi como su prodctuvidad es considerable', '2021-12-16 03:13:47', '2021-12-16 03:13:47');
+(1, 'Principiante', 'Esta categoria es para socios que recien estan empezando con la asociación', '2021-12-17 17:22:37', '2021-12-17 17:22:37'),
+(2, 'Medio', 'Esta categoria es para socios que ya tienen una base concreta con la asociación', '2021-12-17 17:22:45', '2021-12-17 17:22:45'),
+(3, 'Avanzado', 'Esta categoria es para socios que apoyan a los demas socios, asi como su prodctuvidad es considerable', '2021-12-17 17:22:51', '2021-12-17 17:22:51');
 
 -- --------------------------------------------------------
 
@@ -64,9 +64,11 @@ CREATE TABLE `comunidads` (
 --
 
 INSERT INTO `comunidads` (`id`, `distrito_id`, `no_comunidad`, `de_comunidad`, `created_at`, `updated_at`) VALUES
-(1, 211105, 'Santa Maria', 'Se encuentra en la ubicación', '2021-12-16 03:14:07', '2021-12-16 03:14:07'),
-(2, 211101, 'Mucra', 'Se encuentra en la ubicación', '2021-12-16 03:14:23', '2021-12-16 03:14:23'),
-(3, 211105, 'Ayabacas', 'Se encuentra', '2021-12-16 03:14:36', '2021-12-16 03:14:36');
+(1, 211102, 'Tiracoma', 'Se encuentra en la ubicación', '2021-12-17 17:20:06', '2021-12-17 17:20:06'),
+(2, 211103, 'Lenzora', 'Esta comunidad se encuentra', '2021-12-17 17:20:30', '2021-12-17 17:20:30'),
+(3, 211101, 'Kokan', 'Se encuentra en', '2021-12-17 17:20:51', '2021-12-17 17:20:51'),
+(4, 211105, 'Mucra 1', 'Esta comunidad se encuentra', '2021-12-17 17:21:09', '2021-12-17 17:21:09'),
+(5, 211104, 'Collana', 'Esta comunidad se encuentra', '2021-12-17 17:21:33', '2021-12-17 17:21:33');
 
 -- --------------------------------------------------------
 
@@ -2027,11 +2029,7 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `nombre`, `fecha`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Elección de Nueva Directiva', '2021-12-23', 'nueva prueba -01', '2021-12-17 12:45:25', '2021-12-17 12:45:25'),
-(2, 'Aniversario aspaah', '2021-12-22', 'nueva prueba -02', '2021-12-17 12:46:11', '2021-12-17 12:46:11'),
-(3, 'Inicio con la fecha de Siembra', '2021-12-31', 'nueva prueba -03', '2021-12-17 12:46:49', '2021-12-17 12:46:49'),
-(4, 'Nuevo formato de alquiler de maquinarias', '2021-12-20', 'nueva prueba -05', '2021-12-17 12:47:12', '2021-12-17 12:47:12'),
-(5, 'Importacion de cosecha', '2021-12-15', 'nueva prueba -07', '2021-12-17 12:48:08', '2021-12-17 12:48:08');
+(1, 'Asamblea', '2001-04-03', 'S e requiere que todos los socios de la comunidad Kokan asistan a esta asamblea', '2021-12-17 18:37:39', '2021-12-17 18:37:39');
 
 -- --------------------------------------------------------
 
@@ -2071,14 +2069,9 @@ CREATE TABLE `hijos` (
 --
 
 INSERT INTO `hijos` (`id`, `socio_id`, `na_hijo`, `dni_hijo`, `fn_hijo`, `ginstruccion_hijo`, `created_at`, `updated_at`) VALUES
-(7, 16, 'Milan Ticona Gutierrez', '11111112', '2014-03-02', 'Primaria', '2021-12-16 04:26:42', '2021-12-16 04:26:42'),
-(8, 17, 'Kevin Lopez Chipana', '12345678', '2018-07-24', 'Inicial', '2021-12-16 04:55:55', '2021-12-16 04:55:55'),
-(9, 18, 'Alba Canaza Panca', '00345678', '2016-05-03', 'Inicial', '2021-12-16 05:07:22', '2021-12-16 05:07:22'),
-(10, 19, 'Jhonatan Paredes Mamani', '01245678', '2016-11-09', 'Inicial', '2021-12-16 05:26:19', '2021-12-16 05:26:19'),
-(11, 20, 'Jhonatan Paredes Mamani', '00345678', '2017-04-04', 'Inicial', '2021-12-16 05:29:12', '2021-12-16 05:29:12'),
-(12, 21, 'Milan Ticona Gutierrez', '00345678', '2016-03-14', 'Primaria', '2021-12-16 05:32:09', '2021-12-16 05:32:09'),
-(13, 22, 'Lourdes Calla Torres', '12345678', '2017-02-02', 'Inicial', '2021-12-16 05:38:37', '2021-12-16 05:38:37'),
-(14, 23, 'Jhonatan Paredes Mamani', '02345678', '2018-08-21', 'Inicial', '2021-12-16 05:49:05', '2021-12-16 05:49:05');
+(1, 1, 'Jhonatan Paredes Mamani', '00345678', '2006-12-05', 'Secundaria', '2021-12-17 17:24:44', '2021-12-17 17:24:44'),
+(2, 2, 'Lourdes Calla Panca', '12345678', '2008-07-02', 'Secundaria', '2021-12-17 17:29:03', '2021-12-17 17:29:03'),
+(3, 3, 'Lourdes Chipana Calla', '01235678', '2015-06-03', 'Inicial', '2021-12-17 18:45:43', '2021-12-17 18:45:43');
 
 -- --------------------------------------------------------
 
@@ -2110,7 +2103,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (11, '2021_11_30_010913_create_comunidads_table', 1),
 (12, '2021_11_30_010923_create_socios_table', 1),
 (13, '2021_12_14_012706_create_hijos_table', 1),
-(14, '2021_12_16_164104_create_eventos_table', 2);
+(14, '2021_12_16_164104_create_eventos_table', 1);
 
 -- --------------------------------------------------------
 
@@ -2378,8 +2371,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('d1oMLAwB6oarPHdwesf5JLtCApxO2kVFvp2Kn4jr', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicXhhZDg3bDhFVTlLZEFyM1ZEMVhwRzJTeE5hV3Rma1lROHIzWGJVOSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb2Npb3Mvc2hvdyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRpaktsMmtLWHJRUXJRaXZTcVJ2UTRlcVdGb0QzREtUTy9aTi9kSE5pYXBkZk9ZMlM2QkpMNiI7fQ==', 1639621860),
-('ZqbJWCwWBG9B06hnJYrJzbcBho6wG0EzcZfIm3yy', 2, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.20 Safari/537.36 Edg/97.0.1072.13', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiWUd4bmV5YWRWeDZRanliMGNmYU5hQU12dEVoeVIzNEtjMUR1Q1N1SiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI5OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvZXZlbnRvcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRtVnVpZGV3cXEybG9WWWouRmhzeGEuUmxkbFNkZ3NpckFxMTY4TGp6WUpvdVlDQzF0MGJFVyI7fQ==', 1639727664);
+('G9yQZfdY5ucIZU2L0Zf4umzgJkmY7QtTS26E0q6S', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibXQ1YXdZd3daWEtMdG45TkdtYkVWWTlQcU1WWGJRWHloNXNHNGtsVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb2Npb3MiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkZEV2ZnhSd0tsZUZaOC5WYlBtdWpzT1VOekhQalJuY1FkM0lFM3lsSHcxNi9EVDQyU3pCb0ciO30=', 1639748789);
 
 -- --------------------------------------------------------
 
@@ -2409,7 +2401,7 @@ CREATE TABLE `socios` (
   `im_socio` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `conyugue_socio` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `conyugue_dni_socio` varchar(8) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `observaciones_socio` varchar(8) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `observaciones_socio` varchar(220) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2419,14 +2411,9 @@ CREATE TABLE `socios` (
 --
 
 INSERT INTO `socios` (`id`, `categoria_id`, `no_socio`, `ap_socio`, `am_socio`, `dni_socio`, `em_socio`, `nu_celular_socio`, `fn_socio`, `es_civil_socio`, `di_socio`, `ruc_socio`, `comunidad_id`, `latitud_socio`, `longitud_socio`, `ocupacion_socio`, `ginstruccion_socio`, `es_socio`, `im_socio`, `conyugue_socio`, `conyugue_dni_socio`, `observaciones_socio`, `created_at`, `updated_at`) VALUES
-(16, 3, 'Jhobany', 'Ticona', 'Gonzalo', '11111111', 'jhobany.ticona@upeu.edu.pe', '910133785', '2000-07-27', 'Casado', 'Cinc.Cancollani', NULL, 3, NULL, NULL, 'Contador', 'Universidad', '1', 'public/images/GkCmIzmL102qYWSm3QcgrT5yXDyAFOPfc2eyE1bN.jpg', 'Alba Gutierrez Mamani', '01744675', 'Ninguna', '2021-12-16 04:26:42', '2021-12-16 06:50:59'),
-(17, 2, 'Rosa', 'Chipana', 'Torres', '21111111', 'rosa.chipana@gmail.com', '910133785', '1994-12-04', 'Casado', 'Cinc.Cancollani', NULL, 1, NULL, NULL, 'Secretaria', 'Universidad', '1', 'public/images/qqDhnXmUnUXYO3WmFSqPGh1SD6NpdbEZTTZpd6D2.jpg', 'Hernando Lopez Coaquira', '01744675', NULL, '2021-12-16 04:55:55', '2021-12-16 06:48:25'),
-(18, 2, 'Julio', 'Paredes', 'Ticona', '31111111', 'julio.ticona@upeu.edu.pe', '910133785', '2000-06-05', 'Casado', 'Cinc.Cancollani', NULL, 3, NULL, NULL, 'Carpintero', 'Universidad', '1', 'public/images/u38DRHcQOjSzFH9Adnzwq1hOKNojvTWrCrOpGAW5.jpg', NULL, NULL, NULL, '2021-12-16 05:07:22', '2021-12-16 06:48:37'),
-(19, 2, 'Percy', 'Chipana', 'Ticona', '61111111', 'Percy.Chipana@upeu.edu.pe', '910133785', '2000-08-26', 'Divorciado', 'Cinc.Cancollani', NULL, 3, NULL, NULL, 'Carpintero', 'Secundaria', '1', 'public/images/kwt7YY5uXnRC8y1LFfJ3dA4SYF1cvEaBCgKpxilh.jpg', NULL, NULL, NULL, '2021-12-16 05:26:19', '2021-12-16 06:48:50'),
-(20, 1, 'Juli', 'Parca', 'Ticona', '41111111', 'Juli.Parca@upeu.edu.pe', '910133785', '2000-12-12', 'Casado', 'Cinc.Cancollani', NULL, 1, NULL, NULL, 'Docente', 'Universidad', '1', 'public/images/Qg7pYk0XZgCm6SWUOgZVx5itYK2uEk97Qt8YeZLi.jpg', NULL, NULL, NULL, '2021-12-16 05:29:12', '2021-12-16 06:49:03'),
-(21, 3, 'Etduard', 'Ticona', 'Ticona', '51111111', 'Etduard.ticona@upeu.edu.pe', '910133785', '2000-06-03', 'Casado', 'Cinc.Cancollani', NULL, 1, NULL, NULL, 'Agricultor', 'Primaria', '1', 'public/images/c3PJzOmSwby0Q3DtMjuE7i6f5cRcNTvCfWbYL8BU.jpg', NULL, NULL, NULL, '2021-12-16 05:32:09', '2021-12-16 06:49:20'),
-(22, 2, 'Rosa', 'Paredes', 'Ticona', '71111111', 'Rosa.P@upeu.edu.pe', '910133785', '1998-07-29', 'Soltero', 'Cinc.Cancollani', NULL, 1, NULL, NULL, 'Carpintero', 'Secundaria', '1', 'public/images/HCJe1nfJaQ81C0e3qnxPqCRVSMk1aDxAKXRcqDes.jpg', NULL, NULL, NULL, '2021-12-16 05:38:37', '2021-12-16 06:49:34'),
-(23, 1, 'Julia', 'Chipana', 'Ticona', '81111111', 'Julia.Chipana@upeu.edu.pe', '910133785', '1996-04-25', 'Casado', 'Cinc.Cancollani', NULL, 1, NULL, NULL, 'Docente', 'Universidad', '1', 'public/images/eGo9jg9UhZXkfQN8fiPrkzgVaFoj5AZRY8edpRSL.jpg', NULL, NULL, NULL, '2021-12-16 05:49:05', '2021-12-16 06:49:44');
+(1, 3, 'Julio Percy', 'Paredes', 'Flores', '11111111', 'Julio.Paredes@upeu.edu.pe', '920133785', '1980-05-20', 'Casado', 'Av. Triunfo n°567', NULL, 4, NULL, NULL, 'Contador', 'Universidad', '1', 'public/images/RylvjllSNgB7pS6Un88tlWTlf15MQvBdOEUIbVSv.jpg', 'Celinda Mamani Hualla', '01744675', 'Falta pago de padrón', '2021-12-17 17:24:44', '2021-12-17 17:25:25'),
+(2, 3, 'Flor Luz', 'Panca', 'Ruelas', '21111111', 'Flor.Panca@gmail.com', '920133785', '1987-08-02', 'Casado', 'Av. Vilcapaza n°123', NULL, 1, NULL, NULL, 'Docente', 'Universidad', '1', 'public/images/hgxTSwqSgraXKHNbYtDqEyfMPASBZmz23ZChgEle.jpg', 'Ronald Calla Hitmar', '07767675', 'Ninguna', '2021-12-17 17:29:03', '2021-12-17 17:29:03'),
+(3, 2, 'Jazmin', 'Chipana', 'Calla', '31111111', 'JazminChipana@gmail.com', '910133785', '1995-03-24', 'Casado', 'Av. Triunfo n°567', NULL, 2, NULL, NULL, 'Secretaria', 'Universidad', '1', 'public/images/CPqe4iMnJihPJBih2guLMkxef84X0tkKp6NsaMrO.jpg', 'Ronald Calla Hitmar', '08744675', 'Falta pago de carnet', '2021-12-17 18:45:43', '2021-12-17 18:45:43');
 
 -- --------------------------------------------------------
 
@@ -2454,8 +2441,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'Jhobany Ticona', 'jhobany.ticona@upeu.edu.pe', NULL, '$2y$10$ijKl2kKXrQQrQivSqRvQ4eqWFoD3DKTO/ZN/dHNiapdfOY2S6BJL6', NULL, NULL, NULL, NULL, NULL, '2021-12-16 03:13:24', '2021-12-16 03:13:24'),
-(2, 'Henry Jhonatan Velasquez Rosas', 'henry.velasquez@upeu.edu.pe', NULL, '$2y$10$mVuidewqq2loVYj.Fhsxa.RldlSdgsirAq168LjzYJouYCC1t0bEW', NULL, NULL, NULL, NULL, NULL, '2021-12-17 12:44:34', '2021-12-17 12:44:34');
+(1, 'Jhobany Ticona', 'jhobany.ticona@upeu.edu.pe', NULL, '$2y$10$dEvfxRwKleFZ8.VbPmujsOUNzHPjRncQd3IE3ylHw16/DT42SzBoG', NULL, NULL, NULL, NULL, NULL, '2021-12-17 17:18:25', '2021-12-17 17:18:25');
 
 --
 -- Índices para tablas volcadas
@@ -2573,7 +2559,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `comunidads`
 --
 ALTER TABLE `comunidads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `departamentos`
@@ -2591,7 +2577,7 @@ ALTER TABLE `distritos`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -2603,7 +2589,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `hijos`
 --
 ALTER TABLE `hijos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -2627,13 +2613,13 @@ ALTER TABLE `provincias`
 -- AUTO_INCREMENT de la tabla `socios`
 --
 ALTER TABLE `socios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

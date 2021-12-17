@@ -627,10 +627,9 @@ class ComposerStaticInit6de7e7c509a910a0638b2a00cd2916f0
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DepartamentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepartamentoController.php',
         'App\\Http\\Controllers\\DistritoController' => __DIR__ . '/../..' . '/app/Http/Controllers/DistritoController.php',
-
         'App\\Http\\Controllers\\EventoController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventoController.php',
-
         'App\\Http\\Controllers\\HijoController' => __DIR__ . '/../..' . '/app/Http/Controllers/HijoController.php',
+        'App\\Http\\Controllers\\PDFController' => __DIR__ . '/../..' . '/app/Http/Controllers/PDFController.php',
         'App\\Http\\Controllers\\ProvinciaController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProvinciaController.php',
         'App\\Http\\Controllers\\SocioController' => __DIR__ . '/../..' . '/app/Http/Controllers/SocioController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

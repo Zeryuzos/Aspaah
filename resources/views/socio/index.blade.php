@@ -19,7 +19,7 @@
                 <th>Nombre Completo</th>
                 <th>DNI</th>
                 <th>Ocupación</th>
-                <th>Estado</th>
+                <th>Foto</th>
                 <th>Opciones</th>
             </tr>  
         </thead>

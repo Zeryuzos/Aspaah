@@ -20,10 +20,9 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DepartamentoController' => $baseDir . '/app/Http/Controllers/DepartamentoController.php',
     'App\\Http\\Controllers\\DistritoController' => $baseDir . '/app/Http/Controllers/DistritoController.php',
-
     'App\\Http\\Controllers\\EventoController' => $baseDir . '/app/Http/Controllers/EventoController.php',
-
     'App\\Http\\Controllers\\HijoController' => $baseDir . '/app/Http/Controllers/HijoController.php',
+    'App\\Http\\Controllers\\PDFController' => $baseDir . '/app/Http/Controllers/PDFController.php',
     'App\\Http\\Controllers\\ProvinciaController' => $baseDir . '/app/Http/Controllers/ProvinciaController.php',
     'App\\Http\\Controllers\\SocioController' => $baseDir . '/app/Http/Controllers/SocioController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
